@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.claimacademy.cardgame.poker.ui.PokerSetup">
+  <grid id="27dc6" binding="pokerSetupPanel" custom-create="true" layout-manager="FormLayout">
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:3dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <colspec value="fill:p:grow"/>
+    <constraints>
+      <xy x="20" y="20" width="654" height="476"/>
+    </constraints>
+    <properties>
+      <alignmentX value="1.0"/>
+      <background color="-8080284"/>
+      <enabled value="true"/>
+      <foreground color="-8080154"/>
+      <preferredSize width="800" height="600"/>
+    </properties>
+    <border type="empty">
+      <size top="20" left="20" bottom="20" right="20"/>
+      <color color="-8080284"/>
+    </border>
+    <children>
+      <grid id="8b3d7" binding="headerPanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="20" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-8080284"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="35990" class="javax.swing.JLabel" binding="headerLabel" custom-create="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-15263977"/>
+              <enabled value="true"/>
+              <font size="16"/>
+              <foreground color="-15263977"/>
+              <text value="Poker Game Setup"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="c043f" binding="playerSetup" custom-create="true" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="90" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-8080284"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <hspacer id="62102">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <vspacer id="3e772">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+        </children>
+      </grid>
+      <grid id="3de1" binding="radioPanel" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-8080284"/>
+          <enabled value="false"/>
+          <visible value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="bc830" class="javax.swing.JRadioButton" binding="opponentRadio1">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-12559827"/>
+              <borderPainted value="true"/>
+              <selected value="true"/>
+              <text value="1"/>
+            </properties>
+          </component>
+          <component id="42e77" class="javax.swing.JRadioButton" binding="opponentRadio2">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-12559827"/>
+              <borderPainted value="true"/>
+              <text value="2"/>
+            </properties>
+          </component>
+          <component id="61e8" class="javax.swing.JRadioButton" binding="opponentRadio3">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-12559827"/>
+              <borderPainted value="true"/>
+              <text value="3"/>
+            </properties>
+          </component>
+          <component id="75577" class="javax.swing.JRadioButton" binding="opponentRadio4">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-12559827"/>
+              <borderPainted value="true"/>
+              <text value="4"/>
+            </properties>
+          </component>
+          <component id="2061f" class="javax.swing.JRadioButton" binding="opponentRadio5">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-12559827"/>
+              <borderPainted value="true"/>
+              <text value="5"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="93893" binding="opponentPanelForLabel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-8080284"/>
+          <visible value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="cfdaf" class="javax.swing.JLabel" binding="chooseOpponentsLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-15263977"/>
+              <text value="How many pokerPlayers would you like to play against?"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="1d174" class="javax.swing.JSlider" binding="initialMoneySlider">
+        <constraints>
+          <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <autoscrolls value="false"/>
+          <maximum value="100000"/>
+          <minimum value="10"/>
+          <snapToTicks value="true"/>
+        </properties>
+      </component>
+      <grid id="70010" binding="initialMoneyLabelPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-8080284"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="a0acb" class="javax.swing.JLabel" binding="initialMoneyLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-15263977"/>
+              <text value="How much mone would you like to start out with?"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="75d8e" binding="sliderPanel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="18" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-8080284"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="a90a7" class="javax.swing.JLabel" binding="maxSliderLabel">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-15263977"/>
+              <text value="$100,000.00"/>
+            </properties>
+          </component>
+          <hspacer id="5569a">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <component id="7b5e9" class="javax.swing.JLabel" binding="minSliderLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-15263977"/>
+              <text value="$10.00"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="c62ce" binding="enterNamePanel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-8080284"/>
+          <enabled value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="acc6d" class="javax.swing.JTextField" binding="nameTextBox">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-8080284"/>
+              <doubleBuffered value="false"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="ec33d" class="javax.swing.JLabel" binding="nameLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="true"/>
+              <background color="-8080284"/>
+              <focusTraversalPolicyProvider value="true"/>
+              <foreground color="-15263977"/>
+              <opaque value="true"/>
+              <text value="What is your name? *"/>
+              <verifyInputWhenFocusTarget value="false"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="3a5b6" class="javax.swing.JLabel" binding="initialWalletSelection">
+        <constraints>
+          <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <autoscrolls value="true"/>
+          <background color="-8080284"/>
+          <foreground color="-15263977"/>
+          <opaque value="true"/>
+          <text value="$10.00"/>
+        </properties>
+      </component>
+      <component id="9f08c" class="javax.swing.JButton" binding="pokerSubmitButton">
+        <constraints>
+          <grid row="20" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <autoscrolls value="true"/>
+          <background color="-11307974"/>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="true"/>
+          <hideActionText value="true"/>
+          <label value="Let's get started!"/>
+          <margin top="0" left="20" bottom="0" right="2"/>
+          <maximumSize width="80" height="40"/>
+          <minimumSize width="72" height="30"/>
+          <text value="Let's get started!"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="opponentGroup">
+      <member id="42e77"/>
+      <member id="42e77"/>
+      <member id="2061f"/>
+      <member id="bc830"/>
+      <member id="61e8"/>
+      <member id="75577"/>
+      <member id="2061f"/>
+      <member id="81ecd"/>
+    </group>
+  </buttonGroups>
+</form>
