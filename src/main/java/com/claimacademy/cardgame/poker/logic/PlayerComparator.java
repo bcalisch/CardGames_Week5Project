@@ -1,4 +1,7 @@
 package com.claimacademy.cardgame.poker.logic;
+
+import com.claimacademy.cardgame.Player;
+
 import java.util.Comparator;
 
 /**
@@ -6,38 +9,38 @@ import java.util.Comparator;
  */
 public class PlayerComparator implements Comparator<Player> {
 
-    public int compare(Player player1, Player player2) {
-        if (player1.getHand().getHandRank() < player2.getHand().getHandRank()) {
+    public int compare(Player pokerPlayer1, Player pokerPlayer2) {
+        if (((PokerHand)pokerPlayer1.getHand()).getHandRank() < ((PokerHand)pokerPlayer2.getHand()).getHandRank()) {
             return 1;
-        }else if(player1.getHand().getHandRank() > player2.getHand().getHandRank()) {
+        }else if(((PokerHand)pokerPlayer1.getHand()).getHandRank() > ((PokerHand)pokerPlayer2.getHand()).getHandRank()) {
             return -1;
         }else {
-            if (player1.getHand().getHighCard1() < player2.getHand().getHighCard1()) {
+            if (((PokerHand)pokerPlayer1.getHand()).getHighCard1() < ((PokerHand)pokerPlayer2.getHand()).getHighCard1()) {
                 return 1;
-            } else if (player1.getHand().getHighCard1() > player2.getHand().getHighCard1()) {
+            } else if (((PokerHand)pokerPlayer1.getHand()).getHighCard1() > ((PokerHand)pokerPlayer2.getHand()).getHighCard1()) {
                 return -1;
             } else {
-                if (player1.getHand().getHighCard2() < player2.getHand().getHighCard2()) {
+                if (((PokerHand)pokerPlayer1.getHand()).getHighCard2() < ((PokerHand)pokerPlayer2.getHand()).getHighCard2()) {
                     return 1;
-                } else if (player1.getHand().getHighCard2() > player2.getHand().getHighCard2()) {
+                } else if (((PokerHand)pokerPlayer1.getHand()).getHighCard2() > ((PokerHand)pokerPlayer2.getHand()).getHighCard2()) {
                     return -1;
                 }
                 else {
-                    if (player1.getHand().getHighCard3() < player2.getHand().getHighCard3()) {
+                    if (((PokerHand)pokerPlayer1.getHand()).getHighCard3() < ((PokerHand)pokerPlayer2.getHand()).getHighCard3()) {
                         return 1;
-                    } else if (player1.getHand().getHighCard3() > player2.getHand().getHighCard3()) {
+                    } else if (((PokerHand)pokerPlayer1.getHand()).getHighCard3() > ((PokerHand)pokerPlayer2.getHand()).getHighCard3()) {
                         return -1;
                     }
                     else {
-                        if (player1.getHand().getHighCard4() < player2.getHand().getHighCard4()) {
+                        if (((PokerHand)pokerPlayer1.getHand()).getHighCard4() < ((PokerHand)pokerPlayer2.getHand()).getHighCard4()) {
                             return 1;
-                        } else if (player1.getHand().getHighCard4() > player2.getHand().getHighCard4()) {
+                        } else if (((PokerHand)pokerPlayer1.getHand()).getHighCard4() > ((PokerHand)pokerPlayer2.getHand()).getHighCard4()) {
                             return -1;
                         }
                         else {
-                            if (player1.getHand().getHighCard5() < player2.getHand().getHighCard5()) {
+                            if (((PokerHand)pokerPlayer1.getHand()).getHighCard5() < ((PokerHand)pokerPlayer2.getHand()).getHighCard5()) {
                                 return 1;
-                            } else if (player1.getHand().getHighCard5() > player2.getHand().getHighCard5()) {
+                            } else if (((PokerHand)pokerPlayer1.getHand()).getHighCard5() > ((PokerHand)pokerPlayer2.getHand()).getHighCard5()) {
                                 return -1;
                             }
                         }
@@ -48,4 +51,6 @@ public class PlayerComparator implements Comparator<Player> {
 
         return 1;
     }
+
+
 }

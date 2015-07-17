@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by benjamin on 7/17/15.
  */
-public class Hand {
+public abstract class Hand {
     private ArrayList<Card> cards = new ArrayList<Card>();
 
 
@@ -54,6 +54,10 @@ public class Hand {
         return arInt;
     }
 
+    public abstract String printHandRank();
+
+
+
     public static class CardIntComparator implements Comparator<Card> {
 
         public int compare(Card card1, Card card2) {
@@ -69,7 +73,7 @@ public class Hand {
         }
     }
 
-
+    public abstract void evaluateHand();
 
 
 }

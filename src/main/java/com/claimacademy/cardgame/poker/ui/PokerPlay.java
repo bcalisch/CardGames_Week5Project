@@ -1,8 +1,10 @@
 package com.claimacademy.cardgame.poker.ui;
 
-import com.claimacademy.cardgame.poker.logic.Player;
-
-import com.claimacademy.cardgame.poker.logic.Table;
+import com.claimacademy.cardgame.Player;
+import com.claimacademy.cardgame.Table;
+import com.claimacademy.cardgame.poker.logic.PokerHand;
+import com.claimacademy.cardgame.poker.logic.PokerPlayer;
+import com.claimacademy.cardgame.poker.logic.PokerTable;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -15,7 +17,7 @@ import java.text.NumberFormat;
  * Created by benjamin on 7/15/15.
  */
 public class PokerPlay {
-    Table table = new Table();
+    PokerTable table = new PokerTable();
     private JFrame frame;
     private NumberFormat currencyFormat =  NumberFormat.getCurrencyInstance();
     private JPanel playPokerMain;
@@ -81,9 +83,9 @@ public class PokerPlay {
                 table.placeBets(table.getAnte());
                 potLabel.setText(currencyFormat.format(table.getPot()));
                 anteLabel.setText(currencyFormat.format(table.getAnte()));
-                playerTextArea.setText(playerStringBuilder(table.getPlayers().get(0)).toString());
+                playerTextArea.setText(playerStringBuilder((PokerPlayer)table.getPlayers().get(0)).toString());
 
-                playerTextArea.append(table.getPlayers().get(0).getHand().getHandRankString()+"\n");
+                playerTextArea.append(((PokerHand)table.getPlayers().get(0).getHand()).getHandRankString()+"\n");
                 setCards();
                 betSlider.setVisible(true);
                 betSlider.setMinimum((int)table.getAnte());
@@ -128,13 +130,13 @@ public class PokerPlay {
         betButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int betToPlace = betSlider.getValue();
-                for(Player player : table.getPlayers()){
-                    if(player.getWallet().getCash() < betToPlace){
-                        table.getFoldedPlayers().add(player);
+                for(Player pokerPlayer : table.getPlayers()){
+                    if(pokerPlayer.getWallet().getCash() < betToPlace){
+                        table.getFoldedPlayers().add(pokerPlayer);
 
                     }
                     else{
-                        player.getWallet().removeCash(betToPlace);
+                        pokerPlayer.getWallet().removeCash(betToPlace);
                         table.addPot(betToPlace);
                         potLabel.setText(currencyFormat.format(table.getPot()));
                     }
@@ -175,51 +177,51 @@ public class PokerPlay {
     }
 
     private void setComputerCardText(int computer) {
-        Player player;
+        Player pokerPlayer;
         switch(computer){
             case(1):{
-                player = table.getPlayers().get(1);
-                comOneCard1.setText(player.getHand().getCards().get(0).printCard());
-                comOneCard2.setText(player.getHand().getCards().get(1).printCard());
-                comOneCard3.setText(player.getHand().getCards().get(2).printCard());
-                comOneCard4.setText(player.getHand().getCards().get(3).printCard());
-                comOneCard5.setText(player.getHand().getCards().get(4).printCard());
+                pokerPlayer = table.getPlayers().get(1);
+                comOneCard1.setText(pokerPlayer.getHand().getCards().get(0).printCard());
+                comOneCard2.setText(pokerPlayer.getHand().getCards().get(1).printCard());
+                comOneCard3.setText(pokerPlayer.getHand().getCards().get(2).printCard());
+                comOneCard4.setText(pokerPlayer.getHand().getCards().get(3).printCard());
+                comOneCard5.setText(pokerPlayer.getHand().getCards().get(4).printCard());
                 break;
             }
             case(2):{
-                player = table.getPlayers().get(2);
-                comTwoCard1.setText(player.getHand().getCards().get(0).printCard());
-                comTwoCard2.setText(player.getHand().getCards().get(1).printCard());
-                comTwoCard3.setText(player.getHand().getCards().get(2).printCard());
-                comTwoCard4.setText(player.getHand().getCards().get(3).printCard());
-                comTwoCard5.setText(player.getHand().getCards().get(4).printCard());
+                pokerPlayer = table.getPlayers().get(2);
+                comTwoCard1.setText(pokerPlayer.getHand().getCards().get(0).printCard());
+                comTwoCard2.setText(pokerPlayer.getHand().getCards().get(1).printCard());
+                comTwoCard3.setText(pokerPlayer.getHand().getCards().get(2).printCard());
+                comTwoCard4.setText(pokerPlayer.getHand().getCards().get(3).printCard());
+                comTwoCard5.setText(pokerPlayer.getHand().getCards().get(4).printCard());
                 break;
             }
             case(3):{
-                player = table.getPlayers().get(3);
-                comThreeCard1.setText(player.getHand().getCards().get(0).printCard());
-                comThreeCard2.setText(player.getHand().getCards().get(1).printCard());
-                comThreeCard3.setText(player.getHand().getCards().get(2).printCard());
-                comThreeCard4.setText(player.getHand().getCards().get(3).printCard());
-                comThreeCard5.setText(player.getHand().getCards().get(4).printCard());
+                pokerPlayer = table.getPlayers().get(3);
+                comThreeCard1.setText(pokerPlayer.getHand().getCards().get(0).printCard());
+                comThreeCard2.setText(pokerPlayer.getHand().getCards().get(1).printCard());
+                comThreeCard3.setText(pokerPlayer.getHand().getCards().get(2).printCard());
+                comThreeCard4.setText(pokerPlayer.getHand().getCards().get(3).printCard());
+                comThreeCard5.setText(pokerPlayer.getHand().getCards().get(4).printCard());
                 break;
             }
             case(4):{
-                player = table.getPlayers().get(4);
-                comFourCard1.setText(player.getHand().getCards().get(0).printCard());
-                comFourCard2.setText(player.getHand().getCards().get(1).printCard());
-                comFourCard3.setText(player.getHand().getCards().get(2).printCard());
-                comFourCard4.setText(player.getHand().getCards().get(3).printCard());
-                comFourCard5.setText(player.getHand().getCards().get(4).printCard());
+                pokerPlayer = table.getPlayers().get(4);
+                comFourCard1.setText(pokerPlayer.getHand().getCards().get(0).printCard());
+                comFourCard2.setText(pokerPlayer.getHand().getCards().get(1).printCard());
+                comFourCard3.setText(pokerPlayer.getHand().getCards().get(2).printCard());
+                comFourCard4.setText(pokerPlayer.getHand().getCards().get(3).printCard());
+                comFourCard5.setText(pokerPlayer.getHand().getCards().get(4).printCard());
                 break;
             }
             case(5):{
-                player = table.getPlayers().get(5);
-                comFiveCard1.setText(player.getHand().getCards().get(0).printCard());
-                comFiveCard2.setText(player.getHand().getCards().get(1).printCard());
-                comFiveCard3.setText(player.getHand().getCards().get(2).printCard());
-                comFiveCard4.setText(player.getHand().getCards().get(3).printCard());
-                comFiveCard5.setText(player.getHand().getCards().get(4).printCard());
+                pokerPlayer = table.getPlayers().get(5);
+                comFiveCard1.setText(pokerPlayer.getHand().getCards().get(0).printCard());
+                comFiveCard2.setText(pokerPlayer.getHand().getCards().get(1).printCard());
+                comFiveCard3.setText(pokerPlayer.getHand().getCards().get(2).printCard());
+                comFiveCard4.setText(pokerPlayer.getHand().getCards().get(3).printCard());
+                comFiveCard5.setText(pokerPlayer.getHand().getCards().get(4).printCard());
                 break;
             }
         }
@@ -250,7 +252,7 @@ public class PokerPlay {
                 }
             }
             else{
-                playerInfo = playerStringBuilder(table.getPlayers().get(i));
+                playerInfo = playerStringBuilder((PokerPlayer)table.getPlayers().get(i));
                 if (table.getPlayers().get(i).equals(table.getWinner().get(0))){
                     playerInfo.append("\nWINNER!!!\n");
                 }
@@ -347,11 +349,11 @@ public class PokerPlay {
         int anteAmount = (int)(startingWallet*.05);
         table.setAnte(anteAmount);
 
-        table.addPlayer(new Player(name));
+        table.addPlayer(new PokerPlayer(name));
         table.getPlayers().get(0).getWallet().addCash(startingWallet);
         addComputers(startingWallet, numPlayers);
 
-        myString =  playerStringBuilder(table.getPlayers().get(0));
+        myString =  playerStringBuilder((PokerPlayer)table.getPlayers().get(0));
 
 
         frame = new JFrame("Play Poker!!!");
@@ -364,12 +366,12 @@ public class PokerPlay {
 
     }
 
-    private StringBuilder computerStringBuilder(Player player) {
+    private StringBuilder computerStringBuilder(Player pokerPlayer) {
 
         StringBuilder myString = new StringBuilder();
 
-        myString.append("Player: " + player.getName() + "\n");
-        myString.append("Wallet: " + currencyFormat.format(player.getWallet().getCash())+"\n");
+        myString.append("PokerPlayer: " + pokerPlayer.getName() + "\n");
+        myString.append("Wallet: " + currencyFormat.format(pokerPlayer.getWallet().getCash())+"\n");
        // myString.append("Ante: " + currencyFormat.format(anteAmount)+"\n");
         return myString;
     }
@@ -378,9 +380,9 @@ public class PokerPlay {
     private void addComputers(int startingWallet, int numPlayers) {
         StringBuilder playerInfo = new StringBuilder();
         for (int i = 1; i <= numPlayers; i++) {
-            table.addPlayer(new Player("Computer "+ i ));
+            table.addPlayer(new PokerPlayer("Computer "+ i ));
             table.getPlayers().get(i).getWallet().addCash(startingWallet);
-            playerInfo = playerStringBuilder(table.getPlayers().get(i));
+            playerInfo = playerStringBuilder((PokerPlayer)table.getPlayers().get(i));
             if(i ==1){
                 computerOnePanel.setVisible(true);
                 computerOneTextArea.setText(playerInfo.toString());
@@ -404,13 +406,13 @@ public class PokerPlay {
         }
     }
 
-    private StringBuilder playerStringBuilder(Player player) {
+    private StringBuilder playerStringBuilder(PokerPlayer player) {
         StringBuilder playerInfo = new StringBuilder();
 
-        playerInfo.append("Player: " + player.getName() + "\n");
+        playerInfo.append("PokerPlayer: " + player.getName() + "\n");
         playerInfo.append("Wallet: " + currencyFormat.format(player.getWallet().getCash())+"\n");
         if(player.getHand().getCards().size() >0){
-            playerInfo.append("Hand: " + player.getHand().printHandRank()+"\n");
+            playerInfo.append("PokerHand: " + player.getHand().printHandRank()+"\n");
         }
 
         return playerInfo;
